@@ -110,7 +110,6 @@
 						<id>default</id>
 						<goals>
 							<goal>build</goal>
-							<goal>push</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -120,6 +119,7 @@
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
+					<dockerHost>unix:///var/run/docker.sock</dockerHost>
 				</configuration>
 			</plugin>
 		</plugins>
